@@ -20,17 +20,25 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        NOTE note1 = new NOTE();
-        note1.topic = "Lab3";
-        note1.content = "Do and sent lab3 before due time";
-        note1.createdate = "22/04/2026";
-        note1.displaycontent();
+        TEXTNOTE note = new TEXTNOTE();
+        note.topic = "My Note";
+        note.content = "This is my note.";
+        note.displaycontent();
 
-        USER user1 = new USER();
-        user1.name = "Krittapong";
-        user1.editdate = "22/04/2026";
-        user1.createdate = "22/04/2026";
-        user1.write();
+        CHECKLIST checklist = new CHECKLIST();
+        checklist.topic = "My Checklist";
+        checklist.items.add("Item 1");
+        checklist.items.add("Item 2");
+        checklist.items.add("Item 3");
+        checklist.displaycontent();
+
+        USERVIP user = new USERVIP();
+        user.name = "John Doe";
+        user.viplv = "Gold";
+        user.discountRate = 0.1;
+        user.editdate = "2022-01-01";
+        user.createdate = "2022-01-01";
+        user.print();
 
     }
 }
